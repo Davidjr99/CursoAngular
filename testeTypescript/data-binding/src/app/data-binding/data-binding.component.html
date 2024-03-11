@@ -1,0 +1,72 @@
+<section class="property-binding">
+
+
+  <!--<article>
+    <h3> Interpolação</h3>
+    <p> String renderizada com Interpolação: {{ url }} </p>
+    <p> Resultado de 1 + 1 é: {{ 1 + 1 }} </p>
+    <p> Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }} </p>
+    <p>Curso do Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+
+  <article>
+    <h3>Property binding</h3>
+    <img src="{{urlImagem }}">
+    <img [src]="urlImagem ">
+  </article>-->
+
+
+
+<article>
+  <h3>
+  Event binding
+  </h3>
+  <div>
+    <button (click)="botaoClicado()"
+     class="btn btn-primary">
+     Me clique!
+    </button>
+
+    <br><br>
+
+    <input type="text"
+    (keyup)="onKeyup($event)"
+    (keyup.enter)="valorSalvo(campoInput.value)"
+    (blur)="valorSalvo(campoInput.value)"
+    #campoInput />
+
+    <p>
+      Valor atual: {{ valorAtual }}
+    </p>
+    <p> Valor salvo: {{ valorSalvador }} </p>
+
+    <br>
+
+    <span
+    (mouseover)="onmouseoverout()"
+    (mouseout)="onmouseoverout()"
+    [class.highlight]="isMouseOver"
+    >
+
+    Passe o mouse sobre mim!</span>
+
+
+  </div>
+</article>
+
+</section>
+
+
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way databinding</h3>
+    <div>
+
+<input type="text"
+[(ngModel)]="nome"/>
+
+<p> Você digitou: {{ nome }} </p>
+
+    </div>
+  </article>
+</section>

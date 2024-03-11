@@ -1,0 +1,28 @@
+<div>
+  <h2>Escolha um número de 1 a 10:</h2>
+  <input type="number" [(ngModel)]="selectedNumber" min="1" max="10">
+  <button (click)="generateTabuada()">Gerar Tabuada</button>
+  <pre>{{ tabuada }}</pre>
+
+  <img nglf="selectedNumber" [src]="getImageUrl(selectedNumber)" alt="Tabuada do {{selectedNumber}}">
+</div>
+
+<section class="two-way-binding">
+  <article>
+    <h3>two-way data binding</h3>
+    <div>
+      <input type="text"
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event"
+
+      />
+
+      <input type="text" [(ngModel)] = "nome">
+
+
+      <p>Você digitou: {{ nome}}</p>
+
+
+    </div>
+</article>
+</section>

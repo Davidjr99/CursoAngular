@@ -1,0 +1,50 @@
+<h4>
+    <p>Cursos com a Loiane Training!</p>
+</h4>
+
+
+<section class="two-way-binding">
+  <article>
+    <h3>two-way data binding</h3>
+    <div>
+      <input type="text"
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event"
+
+      />
+
+      <input type="text" [(ngModel)] = "nome">
+
+      <input type="text" bindon-ngModel= "nome">
+
+
+      <p>Você digitou: {{ nome}}</p>
+    </div>
+
+    <div>
+      <p>Meu nome é {{ pessoa.nome }}, tenho {{ pessoa.idade }} anos de idade e moro no {{ pessoa.local.Rua }}</p>
+
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.idade">
+
+      <input type="text" [(ngModel)]="pessoa.local.Rua">
+    </div>
+</article>
+</section>
+
+<section class="input-outpu-properties">
+  <article>
+    <h3>Input/Output properties</h3>
+
+    <app-teste2 [nome]="nomeDoCurso"></app-teste2>
+    <app-teste2 [idade]="nomeDoCurso2" ></app-teste2>
+
+
+    <contador></contador>
+
+
+
+  </article>
+
+</section>
+
